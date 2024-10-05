@@ -1,0 +1,25 @@
+{
+  "name": "tsconfig-setup",
+  "module": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/main.ts",
+    "start:dev": "bun --watch src/main.ts",
+    "lint:check": "bunx biome lint src",
+    "lint:fix": "bunx biome lint --write src",
+    "format:check": "bunx biome format src",
+    "format:fix": "bunx biome format --write src",
+    "lint-format:check": "bunx biome check src",
+    "lint-format:fix": "bunx biome check --write src"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
+}
